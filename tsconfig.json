@@ -1,0 +1,31 @@
+{
+    "compilerOptions": {
+        "module": "nodenext",
+        "moduleResolution": "nodenext",
+        "target": "es2024",
+        "declaration": true,
+        "composite": true,
+        "declarationMap": true,
+        "sourceMap": true,
+        "skipLibCheck": true,
+        "strict": true,
+        "outDir": "dist",
+        "baseUrl": ".",
+        "rootDir": ".",
+        "isolatedModules": true,
+        "paths": {
+            "#src/*": [
+                "src/*"
+            ],
+            "tests/*": [
+                "tests/*"
+            ]
+        },
+    },
+    "include": [
+        "src/**/*",
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}

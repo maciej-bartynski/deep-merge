@@ -1,0 +1,62 @@
+{
+  "name": "@bartek01001/deep-merge",
+  "version": "1.0.0",
+  "description": "Util function to merge objects&arrays recursively",
+  "main": "dist/src/index.js",
+  "type": "module",
+  "publishConfig": {
+    "access": "public"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/src/index.js",
+      "types": "./dist/src/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "crud",
+    "express",
+    "json",
+    "file-storage",
+    "api",
+    "rest",
+    "nodejs"
+  ],
+  "author": "bartek01001",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/maciej-bartynski/deep-merge.git"
+  },
+  "bugs": {
+    "url": "https://github.com/maciej-bartynski/deep-merge/issues"
+  },
+  "homepage": "https://github.com/maciej-bartynski/deep-merge#readme",
+  "imports": {
+    "#src/*.js": "./dist/src/*.js",
+    "#src/**/*.js": "./dist/src/**/*.js"
+  },
+  "scripts": {
+    "dev": "concurrently \"tsc --watch --pretty\" \"vitest --watch\"",
+    "test": "vitest --run --reporter=verbose --silent=false",
+    "build": "tsc --pretty",
+    "start": "node dist/src/index.js",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "@bartek01001/fadro": "^4.0.0",
+    "@types/node": "^24.0.12",
+    "@types/supertest": "^6.0.3",
+    "concurrently": "^9.2.0",
+    "nodemon": "^3.1.10",
+    "supertest": "^7.1.3",
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.4"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
