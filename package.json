@@ -17,13 +17,14 @@
     "dist"
   ],
   "keywords": [
-    "crud",
-    "express",
-    "json",
-    "file-storage",
-    "api",
-    "rest",
-    "nodejs"
+    "deep-merge",
+    "merge",
+    "objects",
+    "arrays",
+    "typescript",
+    "utility",
+    "recursive",
+    "javascript"
   ],
   "author": "bartek01001",
   "license": "ISC",
