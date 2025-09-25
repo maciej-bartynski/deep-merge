@@ -55,8 +55,10 @@ deep-merge/
 
 2. **Install dependencies**:
    ```bash
-   npm install
+   npm ci
    ```
+   
+   **Important**: This project enforces the use of `npm ci` for dependency installation. The `npm install` command will be blocked by a preinstall script to ensure deterministic builds.
 
 3. **Verify setup**:
    ```bash
@@ -98,6 +100,13 @@ deep-merge/
 - **`npm run prepublishOnly`**: Automatic pre-publish build
   - Runs before `npm publish`
   - Ensures latest code is compiled
+
+### Dependency Management
+
+- **`npm run safe-install`**: Safe dependency installation
+  - Equivalent to `npm ci`
+  - Use this instead of `npm install` for consistent builds
+  - Required due to npm ci enforcement in this project
 
 ## Build Configuration
 
@@ -151,6 +160,8 @@ npm run dev
 
 This starts both TypeScript compilation and test watching simultaneously. Any changes to source files will trigger recompilation and test re-runs.
 
+**Note**: If you need to reinstall dependencies, use `npm ci` or `npm run safe-install` instead of `npm install`.
+
 ### 2. Testing
 
 ```bash
@@ -179,10 +190,11 @@ Run the compiled code to verify it works as expected.
 
 ### Pre-publish Checklist
 
-1. **Run tests**: `npm test`
-2. **Build project**: `npm run build`
-3. **Verify output**: Check `dist/` directory contents
-4. **Test compiled code**: `npm start`
+1. **Install dependencies**: `npm ci` (if needed)
+2. **Run tests**: `npm test`
+3. **Build project**: `npm run build`
+4. **Verify output**: Check `dist/` directory contents
+5. **Test compiled code**: `npm start`
 
 ### Publishing
 
