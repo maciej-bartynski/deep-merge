@@ -41,7 +41,6 @@
     "#src/**/*.js": "./dist/src/**/*.js"
   },
   "scripts": {
-    "preinstall": "node -e \"if(process.env.npm_command !== 'ci') { console.error('❌ This project requires npm ci. Please use: npm ci instead of npm install'); process.exit(1); }\"",
     "dev": "concurrently \"tsc --watch --pretty\" \"vitest --watch\"",
     "test": "vitest --run --reporter=verbose --silent=false",
     "build": "tsc --pretty",
