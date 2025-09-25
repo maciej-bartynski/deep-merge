@@ -1,6 +1,6 @@
 {
   "name": "@bartek01001/deep-merge",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Util function to merge objects&arrays recursively",
   "main": "dist/src/index.js",
   "type": "module",
